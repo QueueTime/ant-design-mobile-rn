@@ -23,6 +23,7 @@ nohup.out
 _site
 /dist
 lib/**/demo/*.*
+lib/**/image-picker/*.*
 elasticsearch-*
 config/base.yaml
 _data
@@ -49,6 +50,7 @@ npm-debug.log*
 !components/**/__mocks__/*.js
 coverage
 es/**/demo/*.*
+es/**/image-picker/*.*
 package-lock.json
 .cdnkey
 .jest

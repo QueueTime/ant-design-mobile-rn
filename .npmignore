@@ -1,2 +1,4 @@
 lib/**/demo/*.*
+lib/**/image-picker/*.*
 es/**/demo/*.*
+es/**/image-picker/*.*
