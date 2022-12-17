@@ -24,6 +24,7 @@ _site
 /dist
 lib/**/demo/*.*
 lib/**/image-picker/*.*
+lib/image-picker/
 elasticsearch-*
 config/base.yaml
 _data
