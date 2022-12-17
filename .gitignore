@@ -22,7 +22,7 @@ npm-debug.log
 nohup.out
 _site
 /dist
-lib
+lib/**/demo/*.*
 elasticsearch-*
 config/base.yaml
 _data
@@ -48,7 +48,7 @@ npm-debug.log*
 !components/**/__tests__/*.js
 !components/**/__mocks__/*.js
 coverage
-/es/
+es/**/demo/*.*
 package-lock.json
 .cdnkey
 .jest
