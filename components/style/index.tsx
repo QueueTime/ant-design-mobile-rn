@@ -45,8 +45,14 @@ export function WithTheme<T, S>(props: WithThemeProps<T, S>) {
 
   const getStyles = React.useCallback(
     (theme: Theme) => {
-      if (themeStyles && cache.current === undefined) {
-        cache.current = themeStyles(theme)
+      if (themeStyles) {
+        const newStyle = themeStyles(theme)
+        if (
+          cache.current === undefined ||
+          !shallowequal(cache.current, newStyle)
+        ) {
+          cache.current = newStyle
+        }
       }
 
       // TODO: check these styles has changed
