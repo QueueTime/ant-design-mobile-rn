@@ -3,6 +3,7 @@ import { StyleProp, Text, View, ViewStyle } from 'react-native'
 import { RefCheckboxProps } from '../checkbox/Checkbox'
 import { CheckboxStyle } from '../checkbox/style'
 import List from '../list/index'
+import { ListStyle } from '../list/style'
 import { WithTheme, WithThemeStyles } from '../style'
 import { RadioItemPropsType } from './PropsType'
 import Radio from './Radio'
@@ -14,6 +15,7 @@ export interface RadioItemProps
   extends RadioItemPropsType,
     WithThemeStyles<CheckboxStyle> {
   style?: StyleProp<ViewStyle>
+  listItemStyles?: Partial<ListStyle>
 }
 
 export default class RadioItem extends React.Component<RadioItemProps> {
@@ -68,6 +70,7 @@ export default class RadioItem extends React.Component<RadioItemProps> {
           return (
             <ListItem
               style={style}
+              styles={restProps.listItemStyles}
               onPress={disabled ? undefined : this.handleClick}
               {...listProps}>
               {contentDom}
